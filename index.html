@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles-for-web.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,700&family=Delicious+Handrawn&family=Knewave&family=Marcellus+SC&family=Moo+Lah+Lah&family=Outfit:wght@400;500&family=Pacifico&family=Roboto:wght@400;500&family=Rock+Salt&family=Sigmar&display=swap" rel="stylesheet">
+  <title>Friendship Calculator</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="main-txt">
+      <h1 class="txt">Friendship Calculator!</h1>
+      <p class="txt-p">Know how long will your friendship will last..</p>
+    </div>
+  <div class="container">
+  <form>
+    <label for="yourName">Enter your name:</label>
+    <input  class="input-fields" type="text" id="yourName" name="yourName"><br><br>
+    <label for="friendName">Enter your friend's name:</label>
+    <input class="input-fields" type="text" id="friendName" name="friendName"><br><br>
+    <label for="friendBirthdate">Enter your friend's birthdate:</label>
+    <input class="input-fields" type="date" id="friendBirthdate" name="friendBirthdate"><br><br>
+    <button class="btn-submit" type="button" onclick="show('popup'),calculate()">Calculate</button>
+  </form>
+  <div class="popup" id="popup">
+  <b><p id="result"></p></b>
+  <a href="" onclick="hide('popup')" class="hide">Close</a>
+  </div>
+
+  </div>
+  </div>
+</body>
+<script src="/process-app.js"></script>
+<script>
+  $ = function(id){
+    return document.getElementById(id);
+
+}
+var show = function(id){
+    $(id).style.display = 'block';
+
+}
+var hide = function(id){
+    $(id).style.display = 'none';
+}
+
+</script>
+</html>
